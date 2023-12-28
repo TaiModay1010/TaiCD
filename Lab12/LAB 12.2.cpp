@@ -25,14 +25,15 @@ int main() {
 	int x;
 	printf("Nhap X = ");
 	scanf("%d",&x);
-	int ganX;
+	int y;
 	
 	for(int i=0;i<n;i++){
-		int y = abs(arr[i]-x);
-		if(arr[i]>y){
-			ganX= arr[i];
-			printf("%d ",arr[i]);
+		int z = abs(arr[i]-x);
+		int a = abs(arr[i+1]-x);
+		if(a<z){
+			y= arr[i+1];
 		}
 	}
+	printf("gia tri gan X nhat la: %d ",y);
 
 }
