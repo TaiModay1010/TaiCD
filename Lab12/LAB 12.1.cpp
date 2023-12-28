@@ -30,13 +30,13 @@ int main() {
 	int x;
 	printf("\nnhap gia tri X: ");
 	scanf("%d",&x);
-	int low =0;
-	int high = n-1;
-	int mid = (n-1)/2;
+	int low =arr[0];
+	int high = arr[n-1];
+	int mid = (high-low)/2;
 	
-	if(x<arr[mid]){
-		printf("gia tri xa X nhat la: %d",arr[high]);
+	if(x<mid){
+		printf("gia tri xa X nhat la: %d",arr[0]);
 	}else{
-		printf("gia tri xa X nhat la: %d",arr[low]);
+		printf("gia tri xa X nhat la: %d",arr[n-1]);
 	}
 }
