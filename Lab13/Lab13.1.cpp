@@ -1,25 +1,26 @@
 #include <stdio.h>
+#include <math.h>
 
 int main(){
-	printf("Nhap so luong phan tu cua mang:");
+	printf("Nhap so luong phan tu:");
 	int n;
 	scanf("%d",&n);
+	
 	int arr[n];
-	printf("Nhap gia tri phan tu mang:\n");
+	
+	printf("nhap gia tri phan tu:\n");
 	for(int i=0;i<n;i++){
-		printf("gia tri thu %d: ",i);
+		printf("arr[%d]: ",i);
 		scanf("%d",&arr[i]);
 	}
 	
-	printf("Mang vua nhap la:\n");
-	for(int i=0;i<n;i++){
-		printf("%d ",arr[i]);
+	for(int i=0;i<n/2;i++){
+		int temp = arr[i];
+		arr[i] = arr[n-i-1];
+		arr[n-i-1] = temp;	
 	}
 	
-	printf("\nmang sau khi doi thu tu la:\n");
-	for(int i=0;i<n;i++){
-		arr[i]=arr[n-1-i];
+	for(int i =0;i<n;i++){
 		printf("%d ",arr[i]);
 	}
-	
 }
